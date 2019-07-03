@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -119,7 +118,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         }
 
         public interface ItemClickListener {
-            public void onItemClick(int pos);
+            void onItemClick(int pos);
         }
 
         private Context mContext;
@@ -131,8 +130,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
             public ViewHolder(View view) {
                 super(view);
-                mImageView = (ImageView) view.findViewById(R.id.avatar);
-                mTextView = (TextView) view.findViewById(R.id.tv);
+                mImageView =  view.findViewById(R.id.avatar);
+                mTextView =  view.findViewById(R.id.tv);
             }
 
 
